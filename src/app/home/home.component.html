@@ -1,0 +1,173 @@
+<div class="container-xl">
+  <div class="row d-flex align-items-baseline">
+    <div class="row d-flex flex-row align-items-baseline add-hr-bottom">
+      <div class="col-lg-1 col-md-1 col-1 sidebar-row">
+        <div class="sibebar-sticky pt-1">
+          <ul class="nav flex-column justify-content-center align-items-center">
+            <li class="nav-item mb-3 mt-3">
+              <a href="#" class="nav-link acive">
+                <i class="bi bi-house-door"></i>
+              </a>
+            </li>
+            <li class="nav-item mb-3">
+              <a href="#" class="nav-link acive">
+                <i class="bi bi-folder"></i>
+              </a>
+            </li>
+            <li class="nav-item mb-3">
+              <a href="#" class="nav-link acive">
+                <i class="bi bi-window-split"></i>
+              </a>
+            </li>
+            <li class="nav-item mb-3">
+              <a href="#" class="nav-link acive">
+                <i class="bi bi-border-all"></i>
+              </a>
+            </li>
+            <li class="nav-item mb-3">
+              <a href="#" class="nav-link acive">
+                <i class="bi bi-briefcase"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="second col-lg-2 col-md-1 col-md-4 col-4">
+        <div class="search col-2 d-flex">
+          <i class="bi bi-search"></i
+          ><input
+            class="search-input"
+            type="text"
+            placeholder="Search for project"
+          />
+        </div>
+        <div class="projects">
+          <div class="project-1">
+            <p class="d-flex align-items-center">
+              <i class="bi bi-dot dot-blue"></i>Project 1
+            </p>
+            <p class="light-grey-text">
+              <i class="bi bi-arrow-down-short"></i>
+              Upstream contracts
+            </p>
+            <pre
+              (click)="handleClick($event)"
+              id="client1"
+              #client1
+              [ngStyle]="{
+                'background-color': '#EFF1FC',
+                'border-radius': '20px'
+              }"
+              class="p-2"
+            >
+   Client 1</pre
+            >
+            <pre
+              (click)="handleClick($event)"
+              class="light-grey-text"
+              #client2
+              id="client2"
+              class="p-2"
+            >
+   Client 2</pre
+            >
+            <p class="light-grey-text">
+              <i class="bi bi-arrow-down-short"></i> Downstream contracts
+            </p>
+            <pre class="light-grey-text">   Sub-contract 1</pre>
+            <pre class="light-grey-text">   Sub-contract 2</pre>
+            <pre class="light-grey-text">   Sub-contract 3</pre>
+            <p class="d-flex align-items-center">
+              <i class="bi bi-dot dot-green"></i>Project 2
+            </p>
+            <p class="d-flex align-items-center">
+              <i class="bi bi-dot dot-red"></i>Project 3
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="main col-lg-6 col-md-12 col-sm-12">
+        <div class="navbar">
+          <ul class="navbar-nav d-flex flex-row justify-content-center">
+            <li class="nav-item mr-4">
+              <a class="nav-link active" href="#"> Overview </a>
+            </li>
+            <li class="nav-item mr-4">
+              <a class="nav-link" href="#"> Registers </a>
+            </li>
+            <li class="nav-item mr-4">
+              <a class="nav-link" href="#"> Time </a>
+            </li>
+            <li class="nav-item mr-4">
+              <a class="nav-link" href="#"> Payment </a>
+            </li>
+            <li class="nav-item mr-4">
+              <a class="nav-link" href="#"> Risks </a>
+            </li>
+            <li class="nav-item mr-4">
+              <a class="nav-link" href="#"> Docs </a>
+            </li>
+            <li class="nav-item mr-4">
+              <a class="nav-link" href="#"> Parties </a>
+            </li>
+          </ul>
+        </div>
+        <app-overview></app-overview>
+      </div>
+      <div
+        class="
+          additinal-info
+          col-lg-3 col-md-4 col-4
+          d-flex
+          flex-column
+          justify-content-end
+        "
+      >
+        <p class="d-flex flex-row justify-content-end">
+          <i class="bi bi-person-circle"></i>
+          {{ currentUserName }}
+          <i class="bi bi-arrow-down-short"></i>
+        </p>
+        <div
+          class="d-flex flex-column align-items-center justify-content-center"
+        >
+          <div>
+            <div class="row current">
+              <div class="col">
+                <img src="https://i.ibb.co/tbzMBj9/sun.png" width="140px" />
+              </div>
+              <div class="col current-temp">80<sup>C</sup></div>
+            </div>
+          </div>
+          <div class="today-detail">
+            <div>SUNNY 5:35 PM</div>
+            <div>86 HIGH & 64 LOW</div>
+            <div>PRECIP: 5 mm</div>
+            <div>HUMADITY: 10%</div>
+            <div>WIND FROM SE @ 2 km/h</div>
+          </div>
+        </div>
+
+        <mat-card class="demo-inline-calendar-card">
+          <mat-calendar></mat-calendar>
+        </mat-card>
+        <h5 class="mt-4">Pending actinsions</h5>
+        <p class="mt-4">
+          <i class="bi bi-calendar"></i> <span class="date"> 08.08.2019</span>
+        </p>
+        <p>
+          Elevator doors 3rd floor <br />
+          <span class="light-grey-text">Project Manager Instruction</span>
+        </p>
+        <p class="mt-4">
+          <i class="bi bi-calendar"></i> <span class="date"> 12.08.2019</span>
+        </p>
+        <p>
+          Concrete for balconies<br />
+          <span class="light-grey-text">Project Manager Instruction</span>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

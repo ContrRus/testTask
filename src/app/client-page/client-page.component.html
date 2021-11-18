@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="row">
+    <div class="cloumn d-flex flex-column">
+      <h4>Client name: {{ clientInfo }}</h4>
+      <p>Client age:{{ getRandomInt(18, 100) }}</p>
+      <p>Client email:{{ clientInfo }}@gmail.com</p>
+      <button class="btn btn-success" (click)="navigateTo('/home')">
+        Go Home
+      </button>
+    </div>
+  </div>
+</div>

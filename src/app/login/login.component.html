@@ -1,0 +1,27 @@
+<div class="container-lg">
+  <div style="height: 500px" class="d-flex flex-row align-items-center">
+    <form
+      class="d-flex flex-column align-items-center col-12"
+      (submit)="loginUser($event)"
+    >
+      <input
+        type="text"
+        placeholder="Username"
+        id="username"
+        class="m-3"
+        [ngStyle]="{ 'border-radius': '20px', 'text-align': 'center' }"
+      />
+      <input
+        type="password"
+        placeholder="password"
+        id="password"
+        class="m-3"
+        [ngStyle]="{ 'border-radius': '20px', 'text-align': 'center' }"
+      />
+      <input class="btn btn-primary" type="submit" value="Submit" />
+      <p *ngIf="!loggedIn" [ngStyle]="{ color: 'red', 'font-size': '24px' }">
+        {{ loginErros }}
+      </p>
+    </form>
+  </div>
+</div>

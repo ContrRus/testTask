@@ -1,0 +1,12 @@
+<h1>
+  Client information <span [ngStyle]="{ color: 'blue' }">{{ client }}</span>
+</h1>
+<h4>Client name: {{ client }}</h4>
+<p>Client age:{{ getRandomInt(18, 100) }}</p>
+<p>Client email:{{ client }}@gmail.com</p>
+
+<p>I would put here more information if I knew what should I put</p>
+<button class="btn btn-primary mr-2" (click)="goToClientPage()">
+  Go to Client Page
+</button>
+<button class="btn btn-danger" (click)="dialogRef.closeAll()">Close</button>

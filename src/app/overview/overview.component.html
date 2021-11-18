@@ -1,0 +1,133 @@
+<i class="bi bi-globe" [ngStyle]="{ color: 'red' }"></i>
+<span [ngStyle]="{ color: '#8497D5' }"> Client 1</span>
+<div
+  class="
+    tabs
+    d-flex
+    f-row
+    my-4
+    justify-content-space-between
+    align-items-stretch
+  "
+>
+  <div class="total col-4 card mr-3">
+    <p class="d-flex flex-row justify-content-between">
+      <small>Total of the prices</small>
+      <small class="additional-text-red">-25.1%</small>
+    </p>
+
+    <p class="important-info">$10,500,000</p>
+    <div class="progress-bar horizontal rounded">
+      <div class="progress-track">
+        <div class="progress-fill"></div>
+      </div>
+    </div>
+    <small>Over initial conract with <b>$500,000</b> </small>
+  </div>
+  <div class="paid col-4 card mr-3">
+    <p class="d-flex flex-row justify-content-between">
+      <small>Paid so far</small>
+      <small class="additional-text-green">+15%</small>
+    </p>
+
+    <p class="important-info">$8,372,028</p>
+    <div class="progress-bar horizontal rounded">
+      <div class="progress-track">
+        <div class="progress-fill-2"></div>
+      </div>
+    </div>
+    <small>Left to be paid <b>$2,372,020</b> </small>
+  </div>
+  <div class="completion-data col-4 card mr-3">
+    <p class="d-flex flex-row justify-content-between">
+      <small>Completion date</small>
+      <i class="bi bi-info-circle"></i>
+    </p>
+
+    <p class="important-info">01.12.2019</p>
+    <small style="font-size: 14px">Initial completion: 01.11.2019</small>
+    <small><b>345 days</b>Left untill completion </small>
+  </div>
+</div>
+<div class="d-flex flex-row justify-content-between">
+  <p>Latest Communications</p>
+  <p class="filter-text">Filters <i class="bi bi-filter"></i></p>
+</div>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Subject<i class="bi bi-sort-alpha-down"></i></th>
+      <th scope="col">Last Author<i class="bi bi-sort-alpha-down"></i></th>
+      <th scope="col">Type<i class="bi bi-sort-alpha-down"></i></th>
+      <th scope="col">Due Date<i class="bi bi-sort-alpha-down"></i></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="light-grey-text">
+        Elavator doors 3rd floor<i class="bi bi-paperclip"></i>
+      </td>
+      <td>
+        <span class="profession">Project Manager</span>
+        <p>Jessica Hanson</p>
+      </td>
+      <td><span class="text-blue-bg-blue">Risk</span></td>
+      <td><p class="date">04 Mar 2019</p></td>
+    </tr>
+    <tr>
+      <td class="light-grey-text">
+        Concrete for balconies<i class="bi bi-paperclip"></i>
+      </td>
+      <td>
+        <span class="profession">Project Manager</span>
+        <p>Sebastian Handricks</p>
+      </td>
+      <td><span class="text-green-bg-green">Proposal</span></td>
+      <td><p class="date">12 Sep 2019</p></td>
+    </tr>
+    <tr>
+      <td class="light-grey-text">
+        Emergency exit doors on the front<i class="bi bi-paperclip"></i>
+      </td>
+      <td>
+        <span class="profession">Project Manager</span>
+        <p>Howard Hensley</p>
+      </td>
+      <td><span class="text-orange-bg-orange">Variation</span></td>
+      <td><p class="date">12 Sep 2019</p></td>
+    </tr>
+    <tr>
+      <td><b>Windows installation</b><i class="bi bi-paperclip"></i></td>
+      <td>
+        <span class="profession">Project Manager</span>
+        <p>Jessica Hanson</p>
+      </td>
+      <td><span class="text-blue-bg-blue">Risk</span></td>
+      <td><p class="date">04 oct 2019</p></td>
+    </tr>
+    <tr>
+      <td class="light-grey-text">24 Sept 2019</td>
+      <td>
+        <span class="profession">Project Manager</span>
+        <p>Jessica Hanson</p>
+      </td>
+      <td>
+        <span
+          class="light-grey-text border-grey"
+          [ngStyle]="{ 'font-size': '14px' }"
+          >Early warning</span
+        >
+      </td>
+      <td><p class="light-grey-text date border-grey">Pending</p></td>
+    </tr>
+    <tr>
+      <td class="light-grey-text">20 Sept 2019</td>
+      <td>
+        <span class="profession">Contractor</span>
+        <p>Harley Hoops</p>
+      </td>
+      <td><span class="light-grey-text border-grey">Notification</span></td>
+      <td><p class="light-grey-text date border-grey">Closed</p></td>
+    </tr>
+  </tbody>
+</table>
