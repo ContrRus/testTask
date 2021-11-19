@@ -48,7 +48,7 @@ export function momentAdapterFactory() {
       {
         path: 'home',
         component: HomeComponent,
-        // canActivate: [AuthGuard], unccoment when all is done
+        canActivate: [AuthGuard],
       },
       {
         path: '',
