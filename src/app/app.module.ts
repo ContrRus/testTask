@@ -19,6 +19,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { PopUpComponent } from './pop-up/pop-up.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ClientPageComponent } from './client-page/client-page.component';
+import { ReactiveFormsModule } from '@angular/forms';
 export function momentAdapterFactory() {
   return adapterFactory(moment);
 }
@@ -61,6 +62,7 @@ export function momentAdapterFactory() {
     ]),
     MatDialogModule,
     BrowserAnimationsModule,
+    ReactiveFormsModule,
   ],
   providers: [AuthGuard],
   bootstrap: [AppComponent],

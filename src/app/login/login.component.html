@@ -2,7 +2,8 @@
   <div style="height: 500px" class="d-flex flex-row align-items-center">
     <form
       class="d-flex flex-column align-items-center col-12"
-      (submit)="loginUser($event)"
+      (ngSubmit)="loginUser($event)"
+      [formGroup]="loginForm"
     >
       <input
         type="text"
@@ -10,6 +11,7 @@
         id="username"
         class="m-3"
         [ngStyle]="{ 'border-radius': '20px', 'text-align': 'center' }"
+        formControlName="username"
       />
       <input
         type="password"
@@ -17,6 +19,7 @@
         id="password"
         class="m-3"
         [ngStyle]="{ 'border-radius': '20px', 'text-align': 'center' }"
+        formControlName="password"
       />
       <input class="btn btn-primary" type="submit" value="Login" />
       <p *ngIf="!loggedIn" [ngStyle]="{ color: 'red', 'font-size': '24px' }">

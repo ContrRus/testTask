@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthServiceService } from '../services/auth-service.service';
-
+import { FormGroup, FormControl } from '@angular/forms';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -9,8 +9,11 @@ import { AuthServiceService } from '../services/auth-service.service';
 })
 export class LoginComponent implements OnInit {
   constructor(private router: Router, private auth: AuthServiceService) {}
+  loginForm = new FormGroup({
+    username: new FormControl(''),
+    password: new FormControl(''),
+  });
   loginErros = '';
-
   loggedIn = this.auth.statusOfLoggining;
   registerdUsers = [
     {
@@ -29,14 +32,11 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {}
   loginUser(event: any) {
     event.preventDefault();
+    console.log('Login Form values', this.loginForm.value);
 
-    const { target } = event;
-    console.log('target', target);
+    const { username } = this.loginForm.value;
+    const { password } = this.loginForm.value;
 
-    const username = target.querySelector('#username').value;
-    const password = target.querySelector('#password').value;
-    console.log('username', username);
-    console.log('password', password);
     for (let user of this.registerdUsers) {
       if (user.username === username && user.password === password) {
         // this.currentUser.username = username;
