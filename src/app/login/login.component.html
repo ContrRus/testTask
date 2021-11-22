@@ -13,6 +13,19 @@
         [ngStyle]="{ 'border-radius': '20px', 'text-align': 'center' }"
         formControlName="username"
       />
+
+      <small
+        *ngIf="username && username.touched && username.errors?.required"
+        [ngStyle]="{ color: 'red' }"
+      >
+        Username is required</small
+      >
+      <small
+        *ngIf="username && username.touched && username.errors?.minlength"
+        [ngStyle]="{ color: 'red' }"
+      >
+        Username must be at least 3 characters
+      </small>
       <input
         type="password"
         placeholder="password"
@@ -21,7 +34,26 @@
         [ngStyle]="{ 'border-radius': '20px', 'text-align': 'center' }"
         formControlName="password"
       />
-      <input class="btn btn-primary" type="submit" value="Login" />
+
+      <small
+        *ngIf="password && password.touched && password.errors?.required"
+        [ngStyle]="{ color: 'red' }"
+      >
+        Password is required</small
+      >
+      <small
+        *ngIf="password && password.touched && password.errors?.minlength"
+        [ngStyle]="{ color: 'red' }"
+      >
+        Password must be at least 3 characters</small
+      >
+
+      <input
+        class="btn btn-primary"
+        type="submit"
+        value="Login"
+        [disabled]="loginForm.invalid"
+      />
       <p *ngIf="!loggedIn" [ngStyle]="{ color: 'red', 'font-size': '24px' }">
         {{ loginErros }}
       </p>
